@@ -7,13 +7,11 @@ public class DebugExercise2 {
       * This function may have a bug, but if it does, you should find it
       * by stepping over, not into. */
     public static int max(int a, int b) {
-        int w = (b - a) >> 31;
-        /* If you're stepping into this function, click the
-           step out button because you're not going to learn anything. */
-        int z = ~(b - a) >> 31;
-
-        int max = b & w | a & z;
-        return max;
+        int result = 0;
+        if (a > b){
+            result = a;
+        }else result = b;
+        return result;
     }
 
 
@@ -60,7 +58,7 @@ public class DebugExercise2 {
         int i = 0;
         int sum = 0;
         while (i < x.length) {
-            sum = sum + add(sum, x[i]);
+            sum = sum + x[i];
             i = i + 1;
         }
         return sum;
