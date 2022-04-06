@@ -28,7 +28,7 @@ public class NBody {
             double yV = in.readDouble();
             double m = in.readDouble();
             //concatenation of relevant string
-            String img = "images/"+in.readString();
+            String img = in.readString();
             Planet newPlanet = new Planet(xP, yP, xV, yV, m, img);
             output[i++] = newPlanet;
             }
