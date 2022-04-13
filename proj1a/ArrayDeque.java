@@ -30,6 +30,24 @@ public class ArrayDeque<T> {
 
     }
 
+    public void printDeque(){
+
+    }
+
+    public T removeFirst(){
+        return null;
+
+    }
+
+    public T removeLast(){
+        return null;
+    }
+
+    public T get(int index){
+        return null;
+    }
+
+
     public void addLast(T x){
         if (size == items.length){
             resize(size * 2);
