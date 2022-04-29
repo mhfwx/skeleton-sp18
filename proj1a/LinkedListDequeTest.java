@@ -102,20 +102,12 @@ public class LinkedListDequeTest {
 
 
 		ArrayDeque<Integer> a = new ArrayDeque();
-		a.addLast(10);
-		a.addLast(20);
-		a.addLast(30);
-		a.addLast(50);
-		a.addLast(50);
-		a.addFirst(40);
-		a.addLast(50);
-		a.addFirst(60);
-		a.addFirst(100);
-		a.addFirst(1000);
-		a.addFirst(10000);
-		a.addFirst(25410);
+		a.isEmpty();
+		a.addLast(1);
+		a.addLast(2);
+		a.addLast(3);
+		a.addFirst(4);
 		a.removeLast();
-		a.removeFirst();
 
 	}
 } 

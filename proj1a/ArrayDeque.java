@@ -70,8 +70,9 @@ public class ArrayDeque<T> {
         if(items.length > capacity && size * 4 < items.length){
             resize(capacity / 2);
         }
+
+        last = (last - 1 + items.length)%items.length;
         T popItem = items[last];
-        start = (start - 1 + items.length)%items.length;
         size --;
         return popItem;
     }
