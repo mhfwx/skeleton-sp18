@@ -16,6 +16,7 @@ public class ArrayDeque<T> {
 
     private void resize(int newSize){
         T[] a = (T[]) new Object[newSize];
+        capacity = newSize;
 
         if(start >= last ){
             int len1 = items.length - start;
@@ -46,6 +47,18 @@ public class ArrayDeque<T> {
     }
 
     public void printDeque(){
+        if (start > last) {
+            for (int i = start; i < items.length; i++) {
+                System.out.print(items[i] + " ");
+            }
+            for (int i = 0; i < last; i++) {
+                System.out.print(items[i] + " ");
+            }
+        } else {
+            for (int i = start; i < last; i++) {
+                System.out.print(items[i] + " ");
+            }
+        }
 
     }
 
@@ -53,7 +66,7 @@ public class ArrayDeque<T> {
         if(isEmpty()){
             return null;
         }
-        if(items.length > capacity && size * 4 < items.length){
+        if(items.length > capacity*2 && size * 4 < items.length){
             resize(capacity / 2);
         }
         T popItem = items[start];
@@ -67,7 +80,7 @@ public class ArrayDeque<T> {
         if(isEmpty()){
             return null;
         }
-        if(items.length > capacity && size * 4 < items.length){
+        if(items.length > capacity*2 && size * 4 < items.length){
             resize(capacity / 2);
         }
 
