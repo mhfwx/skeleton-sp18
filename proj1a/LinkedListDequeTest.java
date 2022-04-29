@@ -110,6 +110,12 @@ public class LinkedListDequeTest {
 		a.addFirst(40);
 		a.addLast(50);
 		a.addFirst(60);
+		a.addFirst(100);
+		a.addFirst(1000);
+		a.addFirst(10000);
+		a.addFirst(25410);
+		a.removeLast();
+		a.removeFirst();
 
 	}
 } 
